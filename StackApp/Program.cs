@@ -53,8 +53,17 @@ namespace StackApp
             // checks and returns true if all the numbers are different
             throw new NotImplementedException();
         }
+        static Stack<int> MakeStack(int count)
+        {
+            Stack<int> stack = new Stack<int>();
+            Random rnd = new Random();
+            for (int i = 0; i < count; i++)
+                stack.Push(rnd.Next(40) + 1);
+            return stack;
+        }
         static void Main(string[] args)
         {
+            Stack<int> st = MakeStack(10);
         }
     }
 }
